@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab 3 part 2 </title>
+  </head>
+  <body>
+    <script>
+      // -------------------------------------------------10 methods of array ---------------------------------------------------
+      //  (1) array.length
+
+      // array.length => to get the number on elements insdie the array and return a number
+      //          0        1      2      3     4
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+      // let size = arr.length;
+      // console.log(size); // 5
+
+      // -------------------------------------------------
+      //  (2) array.slice
+
+      // array.slice => to cut a part of array according to (p,c) and the origin array stay as it
+      // p : is the start index 'must enter p'
+      // c : is the end index 'optional' (this won't be added in the new array) we get the element before it
+      // and the return is a new array of those choosen
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // let choosen = arr.slice(1, 3);
+      // console.log(arr);
+      // console.log(choosen); // ['css','js']
+
+      // -------------------------------------------------
+      //  (3) array.splice
+
+      // array.splice => to cut a part of array according to (p,c) and the origin array will be changed
+      // p : is the start index 'must enter p'
+      // c : is the number of elements i want to delete
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // let deleted = arr.splice(1, 3);
+      // console.log(arr); //["HTML", "CSS"]
+      // console.log(deleted); // ['css','js', 'PHP']
+
+      // -------------------------------------------------
+      //  (4) array.flat
+
+      // array.flat => if there ara sub arr in arr it will make the o/p an array and the origin array stay as it
+      // arr = ["fruit", [1, 2], 10, ["banana", "apple"]];
+
+      // let totalArr = arr.flat();
+      // console.log(arr); //['fruit', Array(2), 10, Array(2)]
+      // console.log(totalArr); // ["fruit",1, 2, 10, "banana", "apple"]
+
+      // -------------------------------------------------
+      //  (5) array.join
+      
+      // array.join => to convert the array into a string with a specific seprator between each element
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // let string = arr.join("/");
+      // console.log(arr); //["HTML", "CSS", "JS", "PHP", "DB"]
+      // console.log(string); // HTML/CSS/JS/PHP/DB
+
+      // -------------------------------------------------
+      //  (6) array.toString
+      // array.toString => to convert the array into a string with a COMMA seprator only between each element
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // let string2 = arr.toString();
+      // console.log(arr); //["HTML", "CSS", "JS", "PHP", "DB"]
+      // console.log(string2); // HTML,CSS,JS,PHP,DB
+
+      // -------------------------------------------------
+      //  (7) array.reduce()
+
+      // array.reduce() =>  recude : is used for sum all element in an array, takes a function ((p,c), i)
+      //  i : is the intial value for stating the sum 
+      //  p : is the previous value,
+      //  c : is the current value
+
+      // arr = [1,2,3,4,5,6,100];
+
+      // let sum = arr.reduce(function(p,c){
+      //   return p+c
+      // },0);
+
+      // console.log(arr); // [1, 2, 3, 4, 5, 6, 100]
+      // console.log(sum); //121
+
+      // -------------------------------------------------
+      //  (8) array.push
+
+      // // array.push => to add an element to the origin array
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // arr.push("red hat system");
+      // console.log(arr); //['HTML', 'CSS', 'JS', 'PHP', 'DB', 'red hat system']
+
+      // -------------------------------------------------
+      //  (9) array.concat
+
+      // // array.concat => add two or more array in one new array, and the origns saty the same
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+      // newArr = [0,1,2,3,4,5];
+
+      // let total = arr.concat(newArr);
+      // console.log(arr) // ["HTML", "CSS", "JS", "PHP", "DB"]
+      // console.log(newArr) // [0,1,2,3,4,5]
+      // console.log(total) //['HTML', 'CSS', 'JS', 'PHP', 'DB', 0, 1, 2, 3, 4, 5]
+
+      // -------------------------------------------------
+      //  (10) array.delete
+
+      // array.delete => to delete the array, the return is true , takesonly one elemenyt to delete
+
+      // arr = ["HTML", "CSS", "JS", "PHP", "DB"];
+
+      // let deleting = delete arr[0];
+      // console.log(arr); //[empty, 'CSS', 'JS', 'PHP', 'DB']
+      // console.log(arr[0]); // undifined
+      // console.log(deleting) // true
+
+// ------------------------------------------------- 10 methods of object ---------------------------------------------------
+      //  (1) Object.key
+
+      // Object.key => return the keys of the object in an array not the values of the key!
+
+      // let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // let res = Object.keys(obj);
+      // console.log(res) // ['name', 'age', 'isGraduated']
+      // console.log(obj) // {name: 'sara', age: 25, isGraduated: true}
+
+            // -------------------------------------------------
+
+      //  (2) Object.values() 
+
+        // Object.values => return the values of the object in an array 
+      // let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // let res = Object.values(obj);
+      // console.log(res) //  ['sara', 25, true]
+
+             // -------------------------------------------------
+
+      //  (3) Object.create() 
+
+        // Object.values =>   Inherite the property to another  new object, and can add new property to the new object without adding it ot the old one
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // let newObject = Object.create(obj);
+
+      // newObject.city = "Alex";
+      // newObject.name = "sarah eldabaa"
+
+      // console.log(newObject)  //{city: 'Alex', name: 'sarah eldabaa'}
+
+       // -------------------------------------------------
+
+      //  (4) Object.assign() 
+
+        // Object.assign => add the property of two objects into a new object, if a property is duplicated takes the last one and update it in the first obj
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // let obj2 = {
+      //   name : "sayed",
+      //   city: "alex",
+      //   capital: "Cairo"
+      // }
+
+      // let res = Object.assign(obj, obj2);
+      // console.log(obj) // {name: 'sayed', age: 25, isGraduated: true, city: 'alex', capital: 'Cairo'}
+      // console.log(obj2) // {name: 'sayed', city: 'alex', capital: 'Cairo'}
+      // console.log(res) // {name: 'sayed', age: 25, isGraduated: true, city: 'alex', capital: 'Cairo'}
+
+      // -------------------------------------------------
+
+      //  (5) Object.entries() 
+
+        // Object.entries => return an array each eleemnt of it is an array of the property(key & value) of the object
+
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+      // let newObject = Object.entries(obj);
+
+      // console.log(newObject)
+      // [Array(2), Array(2), Array(2)]
+      // [['name', 'sara'], ['age', 25] , ['isGraduated', true]]
+
+      // -------------------------------------------------
+
+      //  (6) Object.fromEntries() 
+
+        // Object.fromEntries => transforms a list of key-value pairs into an object.
+
+      //   let list = [['name', 'sara'], ['age',25]];
+
+      //   let obj = Object.fromEntries(list);
+
+      //  console.log(obj); // {name: 'sara', age: 25}
+
+      // -------------------------------------------------
+
+      //  (7) Object.freeze() 
+
+        // Object.freeze => makes a property or  the  whole obj's properties are fixed can't be updated
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // // obj.name= "sayed";
+      // // console.log(obj.name); // sayed
+
+      // Object.freeze(obj.name); // this freezes only the property name
+      // // Object.freeze(obj); // this freeze all properties
+      // obj.name= "sayed";
+      // obj.age= 30;
+      // console.log(obj.name); //sara
+      // console.log(obj.age); //30
+
+      // console.log(obj)
+
+      // -------------------------------------------------
+
+      //  (8) Object.hasOwn() 
+
+        // Object.hasOwn => return ( true / false ) if the obj has the proerty return true and vise versa
+        //Object.hasOwn(x, y)
+        // x : is the object name
+        // y : is the key I ask about
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+
+      // let yes = Object.hasOwn(obj, 'name')
+      // let no = Object.hasOwn(obj, 'city')
+      // console.log(yes); // true
+      // console.log(no); // false
+
+      // -------------------------------------------------
+
+      //  (9) Object.is() 
+
+        // Object.is => determines whether two values are the same value.
+
+
+        // console.log(Object.is('1',1)) //false
+        // console.log(Object.is(1,1)) //true
+        // console.log(Object.is([],{})) //false
+        // console.log(Object.is('e','-e')) //false
+      
+        // -------------------------------------------------
+
+      // //  (10) Object.seal() 
+
+      //   // Object.seal => the property which is sealed can't be deleted but can be updated
+        
+      //   let obj = {
+      //   name : "sara",
+      //   age: 25,
+      //   isGraduated: true
+      // }
+      // Object.seal(obj); // the obj is sealed with out it the expected value from delete would be true
+      // console.log(delete obj.name); //false
+      // console.log(obj.name); // sara
+
+
+      // ------------------------------------------------- NESTED FUNCTION ---------------------------------------------------
+      // closure : is to access the global varible inside the function
+//       function outerFunction(outerVar) 
+//       { 
+//         return function innerFunction(innerVar) {
+//           console.log('plays')
+//           console.log('outer var is '  +  outerVar);
+//           console.log('inner var is '  +  innerVar);
+//         }
+//       }
+// // outerFunction()
+//       // console.log(outerFunction) // the o/p is the outer function it self
+
+//       const newFunction = outerFunction("outer varible") 
+//       newFunction('inner varible') // outer var is outer varible // inner var is inner varible
+
+
+      // console.log(newFunction('inside'));
+      // console.log(newFunction); // o/p is the inner function it self
+      // ƒ innerFunction(innerVar) {
+      //     console.log('outer var is '  +  outerVar);
+      //     console.log('inner var is '  +  innerVar);
+      //   }
+      </script>
+    </script>
+  </body>
+</html>
