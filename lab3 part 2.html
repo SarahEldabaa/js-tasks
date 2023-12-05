@@ -296,21 +296,21 @@
 
       // ------------------------------------------------- NESTED FUNCTION ---------------------------------------------------
       // closure : is to access the global varible inside the function
-//       function outerFunction(outerVar) 
-//       { 
-//         return function innerFunction(innerVar) {
-//           console.log('plays')
-//           console.log('outer var is '  +  outerVar);
-//           console.log('inner var is '  +  innerVar);
-//         }
-//       }
-// // outerFunction()
-//       // console.log(outerFunction) // the o/p is the outer function it self
+      function outerFunction(outerVar) 
+      { 
+        return function innerFunction(innerVar) {
+          console.log('outer var is '  +  outerVar);
+          console.log('inner var is '  +  innerVar);
+        }
+      }
+// outerFunction()
+      // console.log(outerFunction) // the o/p is the outer function it self
 
-//       const newFunction = outerFunction("outer varible") 
-//       newFunction('inner varible') // outer var is outer varible // inner var is inner varible
+      const newFunction = outerFunction("outer varible") 
+      newFunction('inner varible') // outer var is outer varible // inner var is inner varible
 
 
+      // -------------------------------------------------
       // console.log(newFunction('inside'));
       // console.log(newFunction); // o/p is the inner function it self
       // ƒ innerFunction(innerVar) {
