@@ -1,26 +1,26 @@
-while (true) {
-  let age = Number(prompt("enter your age : "));
+// while (true) {
+//   let age = Number(prompt("enter your age : "));
 
-  if (age === null) {
-    alert("try again!");
-    break;
-  }
-  if (isNaN(age) || age <= 0) {
-    alert("please enter a vaild number");
-    continue;
-  }
+//   if (age === null) {
+//     alert("try again!");
+//     break;
+//   }
+//   if (isNaN(age) || age <= 0) {
+//     alert("please enter a vaild number");
+//     continue;
+//   }
 
-  let status;
-  if (age >= 1 && age <= 10) {
-    status = alert("your are 'child'");
-  } else if (age >= 11 && age <= 18) {
-    status = alert("your are 'Teenager'");
-  } else if (age >= 19 && age <= 50) {
-    status = alert("your are 'Grown up'");
-  } else {
-    status = alert("your are 'Old'");
-  }
-}
+//   let status;
+//   if (age >= 1 && age <= 10) {
+//     status = alert("your are 'child'");
+//   } else if (age >= 11 && age <= 18) {
+//     status = alert("your are 'Teenager'");
+//   } else if (age >= 19 && age <= 50) {
+//     status = alert("your are 'Grown up'");
+//   } else {
+//     status = alert("your are 'Old'");
+//   }
+// }
 // -----------------------------------------------------------------------------------------
 
 // let user = prompt("enter a string");

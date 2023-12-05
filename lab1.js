@@ -17,9 +17,6 @@ fullName = confirm(
   `Welcome ${firstName + " " + lastName} you are ${yourAge} years old `
 );
 
-
-
-
 // alert("It's the first realse of a calculator that only has summation feature ");
 
 // let firstNumber = Number(prompt("enter the first number"));

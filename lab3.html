@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lab3</title>
+  </head>
+  <body>
+    <script>
+      //PDF (1) LAB (1) ---------------------------------------------------------------------------------------------------------------------------------
+
+      // let userName = prompt("enter you user name");
+
+      // let password = prompt("enter you password");
+
+      // while (true) {
+      //   if (userName == "admin" && password == "421$$") {
+      //     alert("Welcome login success");
+      //   } else if (userName !== "admin" && password !== "421$$") {
+      //     alert("Your entered data is wrong");
+      //   } else if (userName !== "admin" && password == "421$$") {
+      //     alert("Your user name is wrong");
+      //   } else if (password !== "421$$" && userName == "admin") {
+      //     alert("Your password is wrong");
+      //   }
+      //   userName = prompt("enter you user name");
+
+      //   password = prompt("enter you password");
+
+      //   if (userName == null || userName == "") break;
+      // }
+
+      //PDF (1) LAB (2) ---------------------------------------------------------------------------------------------------------------------------------
+
+      // let firstNumber = Number(prompt("enter the first number = "));
+      // let operator = prompt("enter the required operation");
+      // let secondNumber = Number(prompt("enter the second number = "));
+      // let res;
+
+      // while (true) {
+      //   if (operator == "*") {
+      //     res = firstNumber * secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "/") {
+      //     res = firstNumber / secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "-") {
+      //     res = firstNumber - secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "+") {
+      //     res = firstNumber + secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "%") {
+      //     res = firstNumber % secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   }
+      //   firstNumber = Number(prompt("enter the first number = "));
+      //   operator = prompt("enter the required operation");
+      //   secondNumber = Number(prompt("enter the second number = "));
+
+      //   if (firstNumber == null || firstNumber == "") break;
+      // }
+
+      //PDF (1) BOUNS ---------------------------------------------------------------------------------------------------------------------------------
+
+      // let firstNumber = Number(prompt("enter the first number = "));
+      // let operator = prompt("enter the required operation");
+      // let secondNumber = Number(prompt("enter the second number = "));
+      // let res;
+
+      // while (true) {
+      //   if (operator == "*") {
+      //     res = firstNumber * secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "/") {
+      //     res = firstNumber / secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "-") {
+      //     res = firstNumber - secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "+") {
+      //     res = firstNumber + secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   } else if (operator == "%") {
+      //     res = firstNumber % secondNumber;
+      //     alert(`the result is : ${res}`);
+      //   }
+
+      //   firstNumber = res;
+      //   operator = prompt("enter the required operation");
+      //   secondNumber = Number(prompt("enter the second number = "));
+
+      //   if (operator === null || operator == "") break;
+      // }
+
+      // PDF (2) LAB (1) ---------------------------------------------------------------------------------------------------------------------------------
+
+      var arr = [];
+
+      var count = parseFloat(prompt("Enter max number of array "));
+
+      for (var i = 1; i <= count; i++) {
+        var s = parseFloat(prompt(`enter number ${i}`));
+        arr.push(s);
+      }
+
+      var total = 0;
+      // console.log(arr);
+
+      for (var i in arr) {
+        total += arr[i];
+      }
+
+      alert(`Sum is: ${total}`);
+      alert(`Avg is: ${total / count}`);
+
+      //PDF (2) LAB (2) ---------------------------------------------------------------------------------------------------------------------------------
+
+      // let list = [];
+      // while (true) {
+      //   let entry = prompt("Choose the operation you wanna do 'add / search' ");
+
+      //   if (entry == "add") {
+      //     let contactName = prompt("enter your name");
+      //     let phoneNumber = prompt("enter your phone number");
+
+      //     let object = {
+      //       contactName,
+      //       phoneNumber,
+      //     };
+
+      //     list.push(object);
+      //   } else if (entry == "search") {
+      //     let enter = prompt("enter the input");
+      //     for (i = 0; i < list.length; i++) {
+      //       if (list[i].contactName == enter || list[i].phoneNumber == enter) {
+      //         alert(
+      //           `contact number : ${list[i].contactName}
+      //           and number phone : ${list[i].phoneNumber} `
+      //         );
+      //       }
+      //     }
+      //     break;
+      //   }
+      // }
+      // console.log(list);
+
+      //PDF (2) BOUNS ---------------------------------------------------------------------------------------------------------------------------------
+
+      // let area;
+      // while (true) {
+      //   let shape = prompt(
+      //     "Enter the required shape to calculate its area : ( circle / triangle / square ... etc)"
+      //   );
+      //   switch (shape) {
+      //     case "circle":
+      //       let r = parseFloat(prompt("enter the radius"));
+      //       area = 3.14 * r;
+      //       alert("the area of circle is" + area);
+      //       break;
+
+      //     case "triangle":
+      //       let h = parseFloat(prompt("enter the hight"));
+      //       let b = parseFloat(prompt("enter the base"));
+      //       area = 0.5 * h * b;
+      //       alert("the area of traingle is" + area);
+      //       break;
+
+      //     case "square":
+      //       let side = parseFloat(prompt("enter the side length"));
+      //       area = side ** 2;
+      //       alert("the area of square is" + area);
+      //       break;
+
+      //     case "rectangle":
+      //       let l = parseFloat(prompt("enter the length"));
+      //       let w = parseFloat(prompt("enter the width"));
+      //       area = w * l;
+      //       alert("the area of rectangle is" + area);
+      //       break;
+
+      //     case "parallelogram":
+      //       let base = parseFloat(prompt("enter the base"));
+      //       let height = parseFloat(prompt("enter the height"));
+      //       area = base * height;
+      //       alert("the area of parallelogram is" + area);
+      //       break;
+
+      //     case "trapezium":
+      //       let firstSide = parseFloat(prompt("enter the first side"));
+      //       let secondSide = parseFloat(prompt("enter the second side"));
+      //       let theight = parseFloat(prompt("enter the height"));
+      //       area = 0.5 * (firstSide + secondSide) * theight;
+      //       alert("the area of trapezium is" + area);
+      //       break;
+
+      //     case "ellipse":
+      //       let minorAxis = parseFloat(prompt("enter the minor axis"));
+      //       let majorAxis = parseFloat(prompt("enter the major axis"));
+      //       area = 3.14 * minorAxis * majorAxis;
+      //       alert("the area of ellipse is" + area);
+      //       break;
+      //   }
+
+      //   if (shape === null || shape == "") break;
+      // }
+      // console.log(area);
+
+      //PDF (2) BOUNS another way  ---------------------------------------------------------------------------------------------------------------------------------
+
+      // while (true) {
+      //   let shape = prompt(
+      //     "Enter the required shape to calculate its area : ( circle / triangle / square ... etc)"
+      //   );
+
+      //   if (shape === "circle") {
+      //     let r = parseFloat(prompt("enter the radius"));
+      //     let area = Math.PI * r;
+      //     alert("the area of circle is :" + area);
+      //   } else {
+      //     if (shape === "triangle") {
+      //       let hight = parseFloat(prompt("enter the hight"));
+      //       let base = parseFloat(prompt("enter the base"));
+      //       area = 0.5 * hight * base;
+      //       alert("the area of triangle is :" + area);
+      //     }
+
+      //     if (shape === "square") {
+      //       side = parseFloat(prompt("enter the side"));
+      //       area = side * side;
+      //       alert("the area of square is :" + area);
+      //     }
+      //   }
+
+      //   if (shape === null || shape === "") break;
+      // }
+      // console.log();
+    </script>
+  </body>
+</html>
