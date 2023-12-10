@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // constructor way --------------------------------------------------------------------------------------------------------------------
+      // 1. defining attrs
+
+      // function Person(fullName, money, sleepMood, healthRate) {
+      //   this.name = fullName;
+      //   this.money = money;
+      //   this.sleepMood = sleepMood;
+      //   this.healthRate = healthRate;
+      // }
+
+      // // 2. defining methods
+
+      // Person.prototype.sleep = function (hours) {
+      //   // console.log("happy");
+      //   if (hours === 7) {
+      //     this.sleepMood = "happy";
+      //   } else if (hours < 7) {
+      //     this.sleepMood = "tired";
+      //   } else {
+      //     this.sleepMood = "lazy";
+      //   }
+      // };
+
+      // Person.prototype.eat = function (meal) {
+      //   if (meal === 3) {
+      //     this.healthRate = " 100 health rate";
+      //   } else if (meal === 2) {
+      //     this.healthRate = "75 health rate";
+      //   } else {
+      //     this.healthRate = "50 health rate";
+      //   }
+      // };
+
+      // Person.prototype.buy = function (item) {
+      //   if (item === 1) {
+      //     this.money -= 10;
+      //   }
+      // };
+
+      // // creating instance
+
+      // person1 = new Person("Sarah Eldabaa", 90, "", "");
+      // person1.sleep(8);
+      // person1.eat(3);
+      // person1.buy(1);
+      // console.log(person1); // Person {name: 'Sarah Eldabaa', money: 80, sleepMood: 'lazy', healthRate: ' 100 health rate'}
+
+      // class way --------------------------------------------------------------------------------------------------------------------
+
+      // class Person {
+      //   constructor(fullName, money, sleepMood, healthRate) {
+      //     this.fullName = fullName;
+      //     this.money = money;
+      //     this.sleepMood = sleepMood;
+      //     this.healthRate = healthRate;
+      //   }
+
+      //   sleep(hours) {
+      //     if (hours === 7) {
+      //       this.sleepMood = "happy";
+      //     } else if (hours < 7) {
+      //       this.sleepMood = "tired";
+      //     } else {
+      //       this.sleepMood = "lazy";
+      //     }
+      //   }
+      //   eat(meal) {
+      //     if (meal === 3) {
+      //       this.healthRate = " 100 health rate";
+      //     } else if (meal === 2) {
+      //       this.healthRate = "75 health rate";
+      //     } else {
+      //       this.healthRate = "50 health rate";
+      //     }
+      //   }
+      //   buy(item) {
+      //     if (item === 1) {
+      //       this.money -= 10;
+      //     }
+      //   }
+      // }
+      // person1 = new Person("Sarah Eldabaa", 20, "", "");
+      // person1.sleep(4);
+      // person1.eat(1);
+      // person1.buy(1);
+      // console.log(person1); // Person {fullName: 'Sarah Eldabaa', money: 10, sleepMood: 'tired', healthRate: '50 health rate'}
+
+      // Using Objects Linking to Other Objects (OLOO) way --------------------------------------------------------------------------------------------------------------------
+
+      // the idea of (oloo) is to create object and take the fixed things (methods) to all other objects,
+      // and to add peroperty for other objects we create that new obj and use dot notation to make its own property
+      // and to take the fixed method from we use the command Object.create
+
+      // let person = {
+      //   sleep(hours) {
+      //     if (hours === 7) {
+      //       this.sleepMood = "happy";
+      //     } else if (hours < 7) {
+      //       this.sleepMood = "tired";
+      //     } else {
+      //       this.sleepMood = "lazy";
+      //     }
+      //   },
+      //   eat(meal) {
+      //     if (meal === 3) {
+      //       this.healthRate = " 100 health rate";
+      //     } else if (meal === 2) {
+      //       this.healthRate = "75 health rate";
+      //     } else {
+      //       this.healthRate = "50 health rate";
+      //     }
+      //   },
+      //   buy(item) {
+      //     if (item === 1) {
+      //       this.money -= 10;
+      //     }
+      //   },
+      // };
+
+      // let person1 = Object.create(person);
+      // person1.fullName = "sarah eldabaa";
+      // person1.money = 200;
+      // person1.sleepMood = "";
+      // person1.healthRate = "";
+
+      // person1.eat(2);
+      // person1.sleep(7);
+      // person1.buy(1);
+
+      // console.log(person1); //{fullName: 'sarah eldabaa', money: 190, sleepMood: 'happy', healthRate: '75 health rate'}
+
+      // Using Factory functions way --------------------------------------------------------------------------------------------------------------------
+
+      // it's a function create objects and return them
+
+      function person(fullName, money, sleepMood, healthRate) {
+        return {
+          fullName,
+          money,
+          sleepMood,
+          healthRate,
+
+          sleep(hours) {
+            if (hours === 7) {
+              this.sleepMood = "happy";
+            } else if (hours < 7) {
+              this.sleepMood = "tired";
+            } else {
+              this.sleepMood = "lazy";
+            }
+          },
+          eat(meal) {
+            if (meal === 3) {
+              this.healthRate = " 100 health rate";
+            } else if (meal === 2) {
+              this.healthRate = "75 health rate";
+            } else {
+              this.healthRate = "50 health rate";
+            }
+          },
+          buy(item) {
+            if (item === 1) {
+              this.money -= 10;
+            }
+          },
+        };
+      }
+
+      let person1 = person("sarah eldabaa", 50, "", "");
+      person1.sleep(0);
+      person1.eat(0);
+      person1.buy(1);
+      console.log(person1); //{fullName: 'sarah eldabaa', money: 40, sleepMood: 'tired', healthRate: '50 health rate', sleep: ƒ, …}
+    </script>
+  </body>
+</html>
