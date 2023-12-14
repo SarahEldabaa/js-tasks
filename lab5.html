@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(id, name, email, workMood, salary, isManager) {
+          this.id = id;
+          this.name = name;
+          this.email = email;
+          this.workMood = workMood;
+          this.salary = salary;
+          this.isManager = isManager;
+        }
+
+        sleep(hours) {
+          if (hours === 7) {
+            this.workMood = "happy";
+          } else if (hours < 7) {
+            this.workMood = "tired";
+          } else {
+            this.workMood = "lazy";
+          }
+        }
+
+        eat(meals) {
+          if (meals === 3) {
+            this.healthRate = 100;
+          } else if (meals === 2) {
+            this.healthRate = 75;
+          } else {
+            this.healthRate = 50;
+          }
+        }
+
+        buy(items) {
+          this.money -= items * 10;
+        }
+      }
+
+      class Employee extends Person {
+        constructor(id, name, email, workMood, salary, isManager) {
+          super(id, name, email, workMood, salary, isManager);
+        }
+
+        work(hours) {
+          if (hours === 8) {
+            this.workMood = "happy";
+          } else if (hours > 8) {
+            this.workMood = "tired";
+          } else {
+            this.workMood = "lazy";
+          }
+        }
+      }
+
+      class Office {
+        constructor(name, employees) {
+          this.name = name;
+          this.employees = employees;
+        }
+
+        getAllEmployees() {
+          return this.employees;
+        }
+
+        getEmployee(empId) {
+          const employee = this.employees.find((emp) => emp.id === empId);
+
+          if (employee) {
+            if (employee.isManager) {
+              return {
+                id: employee.id,
+                email: employee.email,
+                workMood: employee.workMood,
+                isManager: employee.isManager,
+              };
+            } else {
+              return {
+                id: employee.id,
+                email: employee.email,
+                workMood: employee.workMood,
+                salary: employee.salary,
+                isManager: employee.isManager,
+              };
+            }
+          }
+
+          return null;
+        }
+
+        hire(employee) {
+          this.employees.push(employee);
+        }
+
+        fire(empId) {
+          const index = this.employees.findIndex((emp) => emp.id === empId);
+
+          if (index !== -1) {
+            this.employees.splice(index, 1);
+          }
+        }
+      }
+
+      var employeesList = [];
+
+      function promptData() {
+        const name = prompt("Name:");
+        const age = prompt("Age:");
+
+        // process the user input here
+        // ...
+      }
+
+      function startProgram() {
+        while (true) {
+          var option = prompt(
+            'Enter your option (\n"add" to add a User\n"show" to view All Employees"\n"fire" to fire an employee\n ):'
+          );
+
+          if (option.toString().trim() == "q") {
+            // Exiting App
+            break;
+          } else if (option.toString().trim() == "add") {
+            // Addign Employee
+
+            var name = prompt("Enter The Employee's name? ");
+            var id = employeesList.length + 1;
+            var email = prompt("Enter The Employee's Email? ");
+            var workMood = prompt("Enter The Employee's workMood? ");
+            var salary = prompt("Enter The Employee's Salary? ");
+            var isManager = prompt(
+              "Type 'mngr' if this is a manager or 'nrml' if he is not "
+            );
+            if (
+              isManager.toString().trim() != "mngr" &&
+              isManager.toString().trim() != "nrml"
+            ) {
+              alert("You Typed Wrong Data");
+              break;
+            }
+
+            var emp = new Employee(
+              id,
+              name,
+              email,
+              workMood,
+              salary,
+              isManager == "mngr" ? true : false
+            );
+            employeesList.push(emp);
+          } else if (option.toString().trim() == "show") {
+            var selectOption = prompt(
+              'Type Emp ID to view a single ID or "all" to view all employees'
+            );
+            if (selectOption.toString().trim() == "all") {
+              var empListString = "";
+              for (var i = 0; i < employeesList.length; i++) {
+                empListString += `Name: ${employeesList[i].name}, ID: ${employeesList[i].id}`;
+              }
+
+              alert(empListString);
+            } else {
+              var foundEmp = employeesList.find((value, index, array) => {
+                return (
+                  value.id.toString().trim() === selectOption.toString().trim()
+                );
+              });
+
+              if (foundEmp) {
+                alert(
+                  `Name: ${foundEmp.name.toString().trim()} , ID: ${foundEmp.id
+                    .toString()
+                    .trim()}`
+                );
+              } else {
+                alert(" No Emp was found w this iD");
+              }
+            }
+          } else if (option.toString().trim() == "fire") {
+            var selectOption = prompt("type The ID to fire an employee");
+            var emp = employeesList.find((value, index, array) => {
+              return (
+                value.id.toString().trim() === selectOption.toString().trim()
+              );
+            });
+            if (emp) {
+              var index = employeesList.indexOf(emp);
+              employeesList.splice(index, 1);
+              alert(`Emp ${emp.name} has been fired`);
+            } else {
+              alert("This ID doesn't exist");
+            }
+          }
+        }
+      }
+
+      startProgram();
+    </script>
+  </body>
+</html>
