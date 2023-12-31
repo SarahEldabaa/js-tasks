@@ -20,17 +20,14 @@
         }
       }
 
-      // Create an instance of Shape called square
       const square = new Shape("square", 4, 5);
       square.calcPerimeter();
 
-      // Create an instance of Shape called triangle
       const triangle = new Shape("triangle", 3, 3);
       triangle.calcPerimeter();
 
       class Square extends Shape {
         constructor(sideLength) {
-          // Automatically set name to 'square' and sides to 4
           super("square", 4, sideLength);
         }
 
@@ -40,7 +37,6 @@
         }
       }
 
-      // Create an instance of Square
       const squareInstance = new Square(5);
       squareInstance.calcPerimeter();
       squareInstance.calcArea();
@@ -63,15 +59,14 @@
         }
       }
 
-      // Example test
-      console.log(Triple.description); // 'I triple any number you provide'
-      console.log(Triple.calculate()); // 3
-      console.log(Triple.calculate(6)); // 18
+      console.log(Triple.description);
+      console.log(Triple.calculate());
+      console.log(Triple.calculate(6));
 
-      console.log(SquaredTriple.calculate(3)); // 81
-      console.log(SquaredTriple.description); // 'I square the triple of any number you provide'
-      console.log(SquaredTriple.longDescription); // undefined
-      console.log(SquaredTriple.customName); // 'Tripler'
+      console.log(SquaredTriple.calculate(3));
+      console.log(SquaredTriple.description);
+      console.log(SquaredTriple.longDescription);
+      console.log(SquaredTriple.customName);
     </script>
   </body>
 </html>
