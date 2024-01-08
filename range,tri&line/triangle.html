@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    svg {
+      margin: 238px 0px 0 238px;
+    }
+    p {
+      position: absolute;
+      font-size: 20px;
+    }
+    .a {
+      margin: 238px 238px 0 226px;
+      top: 108px;
+    }
+
+    .b {
+      margin: 346px 244px 0 322px;
+      top: 108px;
+    }
+    .c {
+      margin: 210px 244px 0 362px;
+      top: 108px;
+    }
+    .sqrt {
+      position: absolute;
+      bottom: 139px;
+      left: 297px;
+      font-size: 20px;
+    }
+  </style>
+
+  <body>
+    <p class="a">a</p>
+    <p class="b">b</p>
+    <p class="c">c</p>
+
+    <svg width="500" height="500">
+      <polygon
+        points="10,10 10,200, 200,200"
+        style="fill: lime; stroke: purple; stroke-width: 1"
+      />
+    </svg>
+    <div class="sqrt">
+      <span>c = </span>
+      <math>
+        <msqrt>
+          <msup>
+            <mn>a</mn>
+            <mn>2</mn>
+          </msup>
+          <mo>+</mo>
+          <msup>
+            <mn>a</mn>
+            <mn>2</mn>
+          </msup>
+        </msqrt>
+      </math>
+    </div>
+  </body>
+</html>

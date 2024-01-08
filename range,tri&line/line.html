@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Animated Line</title>
+  </head>
+
+  <body>
+    <svg
+      width="300"
+      height="300"
+      viewBox="0 0 300 300"
+      style="border: 1px solid black; background-color: white"
+    >
+      <line id="myLine" x1="0" y1="0" x2="500" y2="300" stroke="red" />
+    </svg>
+
+    <script>
+      var line = document.getElementById("myLine");
+      var x = 0;
+      var y = 0;
+
+      function animateLine() {
+        x += 5;
+        y += 5;
+        line.setAttribute("x2", x);
+        line.setAttribute("y2", y);
+        if (x == 305 && y == 305) {
+          clearInterval(interval);
+          alert("animation end!");
+        }
+      }
+      var interval = setInterval(animateLine, 100);
+    </script>
+  </body>
+</html>

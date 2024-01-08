@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>change background color vi range</h1> -->
+    <h1 id="color">
+      change the 3 color ranges above and observe the color change
+    </h1>
+    <h2><span id="colorOutput"></span></h2>
+    <label> red:</label>
+    <input type="range" min="0" max="255" value="0" id="red" />
+
+    <label> green:</label>
+    <input type="range" min="0" max="255" value="0" id="green" />
+
+    <label> blue:</label>
+    <input type="range" min="0" max="255" value="0" id="blue" />
+
+    <script>
+      function changeColor() {
+        let red = document.getElementById("red").value;
+        let green = document.getElementById("green").value;
+        let blue = document.getElementById("blue").value;
+        let color = `rgb(${red},${green},${blue})`;
+
+        // document.body.style.backgroundColor = color;
+        document.getElementById("colorOutput").innerHTML = ":" + color;
+        document.getElementById("color").style.color = color;
+      }
+
+      document.getElementById("red").addEventListener("input", changeColor);
+      document.getElementById("green").addEventListener("input", changeColor);
+      document.getElementById("blue").addEventListener("input", changeColor);
+    </script>
+  </body>
+</html>
