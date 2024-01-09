@@ -1,0 +1,39 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Two Web Workers Example</title>
+  </head>
+  <body>
+    <h1>Two Web Workers Example</h1>
+
+    <p id="result1">
+      Result from Worker 1: <span id="worker1Result">Waiting...</span>
+    </p>
+    <p id="result2">
+      Result from Worker 2: <span id="worker2Result">Waiting...</span>
+    </p>
+
+    <script>
+      // Creating two new Web Workers
+      const worker1 = new Worker("worker1.js");
+      const worker2 = new Worker("worker2.js");
+
+      // Event listener for messages from Worker 1
+      worker1.addEventListener("message", function (event) {
+        document.getElementById("worker1Result").textContent = event.data;
+      });
+
+      // Event listener for messages from Worker 2
+      worker2.addEventListener("message", function (event) {
+        document.getElementById("worker2Result").textContent = event.data;
+      });
+
+      // Start both workers
+      worker1.postMessage("Start Worker 1!");
+      worker2.postMessage("Start Worker 2!");
+    </script>
+  </body>
+</html>
