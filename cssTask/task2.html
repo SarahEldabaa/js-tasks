@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Salsa", cursive;
+      }
+      h1 {
+        color: white;
+        text-shadow: 4px 4px 5px #000000;
+        transform: translate(10px, -75px);
+      }
+
+      img:hover {
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      img:not(:hover) {
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+      }
+      button {
+        height: 30px;
+        width: 200px;
+        margin: 0 35px;
+        border-radius: 30px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+
+      button:hover {
+        animation: change-colors 2s infinite;
+      }
+
+      @keyframes change-colors {
+        0% {
+          background-color: blue;
+        }
+        25% {
+          background-color: red;
+        }
+        50% {
+          background-color: green;
+        }
+        75% {
+          background-color: yellow;
+        }
+        100% {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://images.ctfassets.net/hrltx12pl8hq/3Z1N8LpxtXNQhBD5EnIg8X/975e2497dc598bb64fde390592ae1133/spring-images-min.jpg"
+      alt=""
+    />
+    <h1>image from google</h1>
+
+    <button>hover me</button>
+  </body>
+</html>

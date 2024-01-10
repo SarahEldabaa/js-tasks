@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cssTask.css" />
+  </head>
+  <body>
+    <h1>Form Validation Example</h1>
+
+    <form id="myForm">
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      />
+      <span class="error-message">Please enter a valid email address.</span>
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+      />
+      <span class="error-message">Please enter a valid password.</span>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script src="cssTask.js"></script>
+  </body>
+</html>
