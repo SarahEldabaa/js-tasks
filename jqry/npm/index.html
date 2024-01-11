@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">
+        <img
+          src="https://e0.pxfuel.com/wallpapers/779/263/desktop-wallpaper-luffy-as-a-kid-from-one-piece-drawings-one-piece-drawing-manga-anime-one-piece-luffy-child.jpg"
+          alt="pic1"
+        />
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="text">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbjRuaGGvJVK8Gns2jH0m-LAle4vUOnEAorylsqd18v0TwC5-SaXUCva6UfkNpOH2G6SU&usqp=CAU"
+          alt="pic2"
+        />
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="text">
+        <img
+          src="https://cdn5.vectorstock.com/i/1000x1000/28/14/doctor-chopper-cartoon-one-piece-anime-vector-44542814.jpg"
+          alt="pic3"
+        />
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("img").css({ width: 200, height: 200 });
+
+      $("img[alt=pic1]").on("click", function () {
+        $("#p1").slideToggle(2000);
+      });
+
+      $("img[alt=pic2]").on("click", function () {
+        $("#p2").slideToggle(2000);
+      });
+
+      $("img[alt=pic3]").on("click", function () {
+        $("#p3").slideToggle(2000);
+      });
+    </script>
+  </body>
+</html>
