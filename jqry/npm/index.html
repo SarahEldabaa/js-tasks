@@ -12,36 +12,66 @@
     </style>
   </head>
   <body>
+    <!-- ********************************************************** Html of task 1***************************************************************88 -->
     <div class="container">
       <div class="text">
         <img
           src="https://e0.pxfuel.com/wallpapers/779/263/desktop-wallpaper-luffy-as-a-kid-from-one-piece-drawings-one-piece-drawing-manga-anime-one-piece-luffy-child.jpg"
           alt="pic1"
         />
-        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="p1">
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit.
+        </p>
       </div>
       <div class="text">
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbjRuaGGvJVK8Gns2jH0m-LAle4vUOnEAorylsqd18v0TwC5-SaXUCva6UfkNpOH2G6SU&usqp=CAU"
           alt="pic2"
         />
-        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="p2">
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit.
+        </p>
       </div>
       <div class="text">
         <img
           src="https://cdn5.vectorstock.com/i/1000x1000/28/14/doctor-chopper-cartoon-one-piece-anime-vector-44542814.jpg"
           alt="pic3"
         />
-        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <p id="p3">
+          Lorem ipsum dolor sit amet <br />
+          consectetur adipisicing elit.
+        </p>
       </div>
     </div>
+    <hr />
+    <!-- ********************************************************** Html of task 2***************************************************************88 -->
+    <div class="container2">
+      <img
+        src="https://e0.pxfuel.com/wallpapers/779/263/desktop-wallpaper-luffy-as-a-kid-from-one-piece-drawings-one-piece-drawing-manga-anime-one-piece-luffy-child.jpg"
+        alt=""
+      />
 
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbjRuaGGvJVK8Gns2jH0m-LAle4vUOnEAorylsqd18v0TwC5-SaXUCva6UfkNpOH2G6SU&usqp=CAU"
+        alt=""
+      />
+
+      <img
+        src="https://cdn5.vectorstock.com/i/1000x1000/28/14/doctor-chopper-cartoon-one-piece-anime-vector-44542814.jpg"
+        alt=""
+      />
+    </div>
+    <button id="stopButton">Stop</button>
     <script
       src="https://code.jquery.com/jquery-3.6.1.js"
       integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
       crossorigin="anonymous"
     ></script>
     <script>
+      // *******************************************************************js of task 1****************************************************************
+
       $("img").css({ width: 200, height: 200 });
 
       $("img[alt=pic1]").on("click", function () {
@@ -54,6 +84,32 @@
 
       $("img[alt=pic3]").on("click", function () {
         $("#p3").slideToggle(2000);
+      });
+
+      // *******************************************************************js of task 2****************************************************************
+
+      $(document).ready(function () {
+        var images = $(".container2 img");
+        var currentIndex = 0;
+        var interval;
+
+        function fadeOutImages() {
+          interval = setInterval(function () {
+            $(images[currentIndex]).fadeOut(1000, function () {
+              currentIndex++;
+              if (currentIndex >= images.length) {
+                currentIndex = 0;
+              }
+              $(images[currentIndex]).fadeIn(1000);
+            });
+          }, 2000);
+        }
+
+        fadeOutImages();
+
+        $("#stopButton").click(function () {
+          clearInterval(interval);
+        });
       });
     </script>
   </body>
