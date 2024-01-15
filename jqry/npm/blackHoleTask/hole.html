@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+
+    <script src="./jqueryDevMin.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <title>bunny go home</title>
+    <style>
+      img[alt="bunny"] {
+        width: 150px;
+        position: fixed;
+        left: 1468px;
+      }
+      img[alt="hole"] {
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      src="https://img.freepik.com/free-vector/white-rabbit-cartoon-white-background_1308-66612.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705276800&semt=ais"
+      alt="bunny"
+      id="draggable"
+      class="ui-widget-content"
+    />
+    <img
+      src="https://img.freepik.com/free-vector/ground-animal-hole-isolated-white-background_1308-73575.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1705190400&semt=ais"
+      alt="hole"
+      id="droppable"
+      class="ui-widget-header"
+    />
+
+    <script>
+      $("#draggable").draggable();
+      $("#droppable").droppable({
+        drop: function (event, ui) {
+          $("#draggable").hide("explode");
+          $(this).addClass("ui-state-highlight").find("img").html("Dropped!");
+        },
+      });
+    </script>
+  </body>
+</html>
