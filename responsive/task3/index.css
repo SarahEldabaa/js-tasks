@@ -1,0 +1,79 @@
+section {
+  color: white;
+  text-transform: uppercase;
+  background-color: beige;
+  display: grid;
+  grid-auto-rows: minmax(80px, auto);
+  text-align: center;
+  align-self: center;
+  grid-template-areas:
+    "head head head"
+    "aside art as"
+    "aside art as"
+    "aside art as"
+    "aside art as"
+    "aside art as"
+    "foot foot foot";
+}
+/* grid-auto-rows: minmax(100px,auto);
+    height: 500px;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-areas:
+        "head head head"
+        "aside art as"
+        "aside art as"
+        "aside art as"
+        "aside art as"
+        "aside art as"
+        "foot foot foot"; */
+
+header {
+  background-color: rgb(49, 79, 188);
+  grid-area: head;
+  padding: 2%;
+}
+
+aside {
+  background-color: rgb(163, 89, 10);
+  grid-area: aside;
+  padding: 8%;
+}
+.as {
+  grid-area: as;
+  background-color: rgb(163, 89, 10);
+}
+
+article {
+  background-color: rgb(48, 124, 29);
+  grid-area: art;
+  padding: 8%;
+}
+
+footer {
+  background-color: rgb(49, 79, 188);
+  grid-area: foot;
+  padding: 2%;
+}
+
+@media (max-width: 500px) {
+  /* css file */
+  body {
+    background-color: aqua;
+  }
+}
+@media (min-width: 501px) and (max-width: 700px) {
+  body {
+    background-color: blueviolet;
+  }
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  body {
+    background-color: rgb(55, 226, 43);
+  }
+}
+@media (min-width: 901px) {
+  body {
+    background-color: burlywood;
+  }
+}
