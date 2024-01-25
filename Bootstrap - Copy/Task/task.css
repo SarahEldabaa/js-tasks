@@ -1,0 +1,241 @@
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+.card-img-overlay {
+  top: 5%;
+  left: 5%;
+}
+
+.container .row {
+  padding-top: 30px;
+}
+.col-md-4 {
+  background-color: rgb(232, 229, 229);
+}
+
+aside section {
+  margin: 22px 0 0 22px;
+  padding: 11px 22px;
+  background: url("images/sidebar_section_background.png") repeat-x;
+  border-radius: 11px;
+}
+
+aside section ul {
+  margin: 0 0 0 22px;
+  list-style: none;
+}
+
+aside section ul li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
+aside section ul li a:hover {
+  text-decoration: underline;
+}
+
+.blogPost header p,
+.blogPost header p a {
+  font-size: 14px;
+  font-style: italic;
+  color: #777;
+}
+
+.blogPost header p a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.blogPost img {
+  margin: 22px 0;
+  box-shadow: 3px 3px 7px #777;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #686b6f;
+  background-color: #d2d4d8;
+  box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0
+    var(--bs-accordion-border-color);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(162, 163, 163, 0.25);
+}
+
+.accordion a {
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+form {
+  margin-top: 21px;
+  padding-top: 22px;
+  border-top: 1px solid #d7d7d7;
+}
+
+form p {
+  display: table;
+  margin-bottom: 22px;
+  padding: 0 22px;
+}
+
+form label {
+  display: table-cell;
+  width: 140px;
+  padding-right: 20px;
+  text-align: right;
+  font-weight: bold;
+  vertical-align: top;
+}
+
+form input[type="text"] {
+  display: table-cell;
+  width: 300px;
+  height: 20px;
+  border: 1px solid #d7d7d7;
+}
+
+form textarea {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #d7d7d7;
+}
+
+form input[type="submit"] {
+  margin-left: 162px;
+}
+
+form .btn-primary {
+  --bs-btn-bg: rgb(128, 129, 131);
+  --bs-btn-border-color: rgb(128, 129, 131);
+}
+
+footer h3 {
+  color: #fff;
+}
+
+footer a {
+  color: #999;
+  font-weight: lighter;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer ul {
+  /* margin: 0 0 0 40px; */
+  list-style: square;
+  color: #565656;
+}
+
+footer ul li a {
+  display: block;
+}
+
+/* responsive */
+
+/* -------------------------------- CONTAINER ------------------------------- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1000px !important;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+/* ------------------------------- CARD IMAGE ------------------------------- */
+@media (min-width: 520px) {
+  .card-img-overlay {
+    width: 80% !important;
+  }
+  .card-img-overlay h2 {
+    font-size: 20px;
+    margin-bottom: 10px !important;
+  }
+  .card-img-overlay p {
+    font-size: 12px;
+    color: #d9f499;
+  }
+}
+@media (min-width: 600px) {
+  .card-img-overlay {
+    width: 80% !important;
+  }
+  .card-img-overlay h2 {
+    font-size: 25px;
+    margin-bottom: 10px !important;
+  }
+  .card-img-overlay p {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .card-img-overlay {
+    width: 60% !important;
+  }
+  .card-img-overlay h2 {
+    font-size: 25px;
+    margin-bottom: 20px !important;
+  }
+  .card-img-overlay p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 992px) {
+  .card-img-overlay {
+    width: 50% !important;
+  }
+  .card-img-overlay h2 {
+    font-size: 25px;
+    margin-bottom: 20px !important;
+  }
+  .card-img-overlay p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1400px) {
+  .card-img-overlay {
+    width: 40% !important;
+    top: 10% !important;
+  }
+  .card-img-overlay h2 {
+    font-size: 30px;
+    margin-bottom: 30px !important;
+  }
+  .card-img-overlay p {
+    font-size: 16px;
+  }
+}
+/* ---------------------------------- ASIDE --------------------------------- */
+@media (min-width: 768px) and (max-width: 1400px) {
+  aside.px-5 {
+    padding: 0px 0px !important;
+  }
+}
