@@ -7,7 +7,8 @@
 </head>
 <body>
         
-        <h2>Application name : </h2>
+        <?php include "students.php" ?>
+        <h2>Application name : students table  </h2>
         <?php include "student-table.php" ?>
 </body>
 </html>
