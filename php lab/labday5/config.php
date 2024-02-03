@@ -1,14 +1,12 @@
 <?php
-session_start();
 
-$dbhost = 'localhost';
-$dbuser = 'root';
-$dbpass = '';
-$dbname = 'userdetails';
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "login";
+
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (!$conn) {
-        echo "Error: Unable to connect to MySQL." . PHP_EOL;
+        echo "Error: Unable to connect to MySQL.";
 }
-
-// echo 'Connected successfully<br>';
