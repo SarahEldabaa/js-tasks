@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"IndexTest::testcommonFactorZero":0.012,"IndexTest::testcommonFactorOne":0,"IndexTest::testcommonFactorFive":0,"IndexTest::testcommonFactorRandomInt":0.001,"IndexTest::testcommonFactorNegative":0.001,"IndexTest::testcommonFactorFloat":0,"IndexTest::testcommonFactorFalse":0,"IndexTest::testcommonFactorString":0}}
